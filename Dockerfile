@@ -1,5 +1,5 @@
 FROM golang:alpine3.12
-RUN apk add --no-cache git && \
+RUN apk add --no-cache git gcc&& \
     mkdir $HOME/src && \
     cd $HOME/src && \
     git clone https://github.com/gohugoio/hugo.git && \
