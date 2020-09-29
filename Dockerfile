@@ -7,7 +7,7 @@ RUN apk add --no-cache \
     build-base \
     libc6-compat \
     npm && \
-    npm install -G autoprefixer postcss-cli
+    npm install -G autoprefixer postcss-cli && \
     git clone https://github.com/kubernetes/website.git && \
     cd website && \
     npm install -g yarn --force && \
