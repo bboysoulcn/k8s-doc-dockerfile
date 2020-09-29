@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build-and-deploy-image:
+  build:
     runs-on: ubuntu-latest
     steps:
       # 拉取master分支
@@ -23,11 +23,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       # 编译并且推送到dockerhub
-      - name: Build and push
+      - name: Build website
         uses: docker/build-push-action@v2
         with:
           push: true
-          platforms: linux/amd64
+          platforms: linux/arm/v7
+          file: ./Dockerfile
           tags: |
             bboysoul/k8s-doc:latest
             bboysoul/k8s-doc:v1.0.0
