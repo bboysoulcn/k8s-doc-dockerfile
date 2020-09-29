@@ -5,4 +5,4 @@ RUN apk add --no-cache git && \
     git clone https://github.com/gohugoio/hugo.git && \
     cd hugo && \
     CGO_ENABLED=1 && \
-    go install --tags extended && \
+    go install --tags extended 
