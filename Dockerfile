@@ -15,7 +15,7 @@ RUN apk add --no-cache \
     openssh-client \
     rsync \
     build-base \
-    libc6-compat \
+    libc6-compat && \
     git clone https://github.com/kubernetes/website.git && \
     cd website && \
     npm install -g yarn  && \
