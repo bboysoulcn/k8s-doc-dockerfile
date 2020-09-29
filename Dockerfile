@@ -7,10 +7,10 @@ RUN apk add --no-cache \
     build-base \
     libc6-compat \
     hugo && \
-    npm install -G autoprefixer postcss-cli && \
     git clone https://github.com/kubernetes/website.git && \
     cd website && \
-    npm install -g yarn --force && \
+    npm install -g yarn  && \
+    npm install -G autoprefixer postcss-cli && \
     yarn && \
     git submodule update --init --recursive --depth 1
 WORKDIR /website
