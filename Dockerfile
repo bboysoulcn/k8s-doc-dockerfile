@@ -1,5 +1,6 @@
-FROM golang:alpine3.12
-RUN apk add --no-cache git gcc&& \
+FROM golang:buster
+RUN apt-get update && \
+    apt-get install gcc git && \
     mkdir $HOME/src && \
     cd $HOME/src && \
     git clone https://github.com/gohugoio/hugo.git && \
