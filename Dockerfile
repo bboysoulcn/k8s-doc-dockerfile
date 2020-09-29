@@ -18,7 +18,6 @@ RUN apk add --no-cache \
     libc6-compat && \
     git clone https://github.com/kubernetes/website.git && \
     cd website && \
-    npm install -g yarn  && \
     npm install -G autoprefixer postcss-cli && \
     yarn && \
     git submodule update --init --recursive --depth 1
