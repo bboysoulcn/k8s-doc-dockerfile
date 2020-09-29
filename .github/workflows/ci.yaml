@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          platforms: linux/amd64,linux/arm/v7
+          platforms: linux/arm/v7
           tags: |
             bboysoul/k8s-doc:latest
             bboysoul/k8s-doc:v1.0.0
